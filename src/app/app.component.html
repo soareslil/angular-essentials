@@ -11,7 +11,7 @@
   <h1> hello </h1>
 </div>
 <p>some text!</p>
-<app-user></app-user>
+<app-user [name]="rootName"  (nameChanged)="onNameChanged($event)"></app-user>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
