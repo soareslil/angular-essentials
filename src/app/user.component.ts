@@ -3,9 +3,16 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'app-user',
   template: `
-    <p> hello world</p>
+    <input type="text" (input)="onUserInput($event)">
+    <p> hello world {{ name }}</p>
     <p> i am the user component </p>
   `
 })
 
-export class UserComponent{}
+export class UserComponent{
+  name= 'max';
+
+  onUserInput(event:any){
+    this.name = event.target.value;
+  }
+}
